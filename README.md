@@ -15,3 +15,12 @@ The unit of analysis is individual YouTube comments.
 
 ## Current Status
 Week 2: Research question defined, GitHub repository created, and initial data exploration planned.
+
+## Week 3: Data Construction, Cleaning, and Measurement Strategy
+Week 3 focuses on constructing the YouTube comment dataset, documenting data cleaning and preprocessing decisions, and defining measurement strategies.
+
+- Dataset: 9 videos (3 per category: TED-style talk, short film, personal opinion)
+- Time stratification: videos selected across three periods (2000–2010, 2010–2020, post-2020)
+- Collection goal: up to 500 top-level comments per video using the YouTube Data API
+- Cleaning plan: removal of deleted or removed comments, duplicate entries, and extremely short comments
+- Measurement plan: sentiment scores as a proxy for emotional tone and word count as a proxy for engagement
