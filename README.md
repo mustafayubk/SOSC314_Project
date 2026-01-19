@@ -17,6 +17,7 @@ The unit of analysis is individual YouTube comments.
 Week 2: Research question defined, GitHub repository created, and initial data exploration planned.
 
 Week 3: Data Construction, Cleaning, and Measurement Strategy
+
 Week 3 focuses on constructing the YouTube comment dataset, documenting data cleaning and preprocessing decisions, and defining measurement strategies.
 
 - Dataset: 9 videos (3 per category: TED-style talk, short film, personal opinion)
