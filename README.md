@@ -25,3 +25,8 @@ Week 3 focuses on constructing the YouTube comment dataset, documenting data cle
 - Collection goal: up to 500 top-level comments per video using the YouTube Data API
 - Cleaning plan: removal of deleted or removed comments, duplicate entries, and extremely short comments
 - Measurement plan: sentiment scores as a proxy for emotional tone and word count as a proxy for engagement
+
+### Execution Environment
+
+All notebooks are designed to be run in Google Colab. API credentials are stored securely within the Colab environment and are not committed to the GitHub repository. Notebooks in this repository are uploaded without execution outputs to ensure reproducibility and protect credentials.
+
