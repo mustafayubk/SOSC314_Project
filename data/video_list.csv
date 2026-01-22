@@ -1,7 +1,44 @@
-video_id,title,channel,category,year,time_bin
-,Do Schools Kill Creativity?,TED,TED-style talk,2006,2000-2010
-,The Present,Jacob Frey,Short film,2014,2010-2020
-,Social Media Is Ruining Your Life,Einzelgänger,Personal opinion,2019,2010-2020
+video_id,title,channel,category,year,time_bin,selection_reason,comment_threshold_met
+,Do Schools Kill Creativity?,TED,TED-style talk,2006,2000-2010,Flagship educational TED talk with sustained audience discussion,yes
+,The Present,Jacob Frey,Short film,2014,2010-2020,Standalone narrative short film with active viewer engagement,yes
+,Social Media Is Ruining Your Life,Einzelgänger,Personal opinion,2019,2010-2020,First-person commentary video with extensive opinion-based discussion,yes
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
 ,,,,,
 ,,,,,
 ,,,,,
