@@ -15,7 +15,7 @@ The primary unit of analysis is the individual top-level YouTube comment. Each c
 
 ## Project Status
 
-### Week 2
+### Week 2:
 - Research question development
 - Genre selection and project scoping
 - GitHub repository setup
@@ -31,6 +31,15 @@ Week 3 focuses on constructing a comparable YouTube comment dataset and document
 - **Measurement strategy (current):** Audience engagement operationalized as the number of top-level comments per video, with aggregation by genre for exploratory analysis
 - **Planned analyses:** Sentiment and emotional tone estimation using text-as-data methods in later project stages
 - **Outputs:** Cleaned comment dataset, failure logs for videos below threshold, and a genre-based descriptive figure summarizing engagement
+
+### Week 4: Operationalization and Representation (In Progress)
+Week 4 focuses on operationalizing emotional tone in YouTube comments and comparing how different analytic and representation choices affect observed genre-level patterns.
+
+Current work includes:
+- Preparing an analysis-ready comment dataset for Week 4
+- Implementing multiple sentiment operationalizations (VADER and TextBlob)
+- Comparing preprocessing and representation decisions under controlled conditions
+- Producing a genre-level comparison figure and analytic report
 
 ## Execution Environment
 All notebooks are designed to be run in Google Colab. API credentials are stored securely as environment variables within Colab and are not committed to the GitHub repository. Notebooks are uploaded without execution outputs to ensure reproducibility and credential safety.
