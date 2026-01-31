@@ -41,6 +41,17 @@ Current work includes:
 - Comparing preprocessing and representation decisions under controlled conditions
 - Producing a genre-level comparison figure and analytic report
 
+### Analytic Comparisons (Week 4 Focus)
+
+Week 4 explicitly evaluates how analytic and representation choices affect sentiment estimates. Two types of controlled comparisons are implemented:
+
+1. **Method comparison:** Sentiment scores are computed using two dictionary-based approaches (VADER and TextBlob) on the same set of comments to assess agreement and divergence across genres.
+
+2. **Preprocessing comparison:** Sentiment is computed on multiple versions of the same text (raw, basic preprocessing, aggressive preprocessing) to examine how cleaning and normalization decisions shift genre-level sentiment patterns.
+
+These comparisons demonstrate that sentiment estimates are not fixed properties of the data but depend on methodological choices, which has implications for interpreting emotional tone across YouTube genres.
+
+
 ## Execution Environment
 All notebooks are designed to be run in Google Colab. API credentials are stored securely as environment variables within Colab and are not committed to the GitHub repository. Notebooks are uploaded without execution outputs to ensure reproducibility and credential safety.
 
