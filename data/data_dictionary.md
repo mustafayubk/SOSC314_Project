@@ -40,3 +40,35 @@ One row represents one **top-level YouTube comment**.
 
 - word_count: Number of words in cleaned comment text
 - sentiment_score: Sentiment score assigned using a text-as-data method (to be implemented and compared in Week 4)
+
+
+## Week 4: Sentiment Measures and Preprocessing Variants
+
+The following sentiment measures were constructed for Week 4 analysis to examine how different operationalization and preprocessing choices affect observed emotional tone.
+
+### Sentiment Methods
+
+- **sentiment_vader / sent_raw**  
+  Sentiment scores generated using the VADER sentiment analyzer applied to raw comment text. VADER is designed for short, informal online text and returns a compound score ranging from -1 (negative) to +1 (positive).
+
+- **sentiment_textblob**  
+  Sentiment polarity scores generated using TextBlob. TextBlob relies on a lexicon-based approach and produces polarity scores on a similar scale but with different sensitivity to wording and context.
+
+### Preprocessing Variants
+
+To assess how text preprocessing choices affect sentiment estimates, multiple text representations were created:
+
+- **text_raw**  
+  Original comment text with no preprocessing applied.
+
+- **text_basic**  
+  Light preprocessing including lowercasing and removal of punctuation and extra whitespace.
+
+- **text_aggressive**  
+  More aggressive preprocessing including stopword removal and normalization, designed to reduce noise but potentially remove contextual cues.
+
+Corresponding sentiment scores (`sent_raw`, `sent_basic`, `sent_aggressive`) were computed using VADER on each text variant.
+
+### Analytical Purpose
+
+These multiple sentiment representations allow controlled comparisons of how preprocessing intensity and sentiment method choice influence genre-level sentiment patterns.
