@@ -51,10 +51,6 @@ Week 4 explicitly evaluates how analytic and representation choices affect senti
 
 These comparisons demonstrate that sentiment estimates are not fixed properties of the data but depend on methodological choices, which has implications for interpreting emotional tone across YouTube genres.
 
-
-## Execution Environment
-All notebooks are designed to be run in Google Colab. API credentials are stored securely as environment variables within Colab and are not committed to the GitHub repository. Notebooks are uploaded without execution outputs to ensure reproducibility and credential safety.
-
 ### Week 5: Diagnostics, Robustness, and Validity Checks (In Progress)
 
 Week 5 focuses on evaluating the robustness and validity of sentiment-based findings by conducting diagnostic analyses under controlled conditions. Rather than introducing new data, this stage tests how sensitive observed patterns are to analytic and preprocessing decisions.
@@ -80,3 +76,7 @@ These diagnostics demonstrate that sentiment estimates are not invariant propert
 At this stage, the project prioritizes building a reusable and transparent analysis pipeline for sentiment estimation, preprocessing, and diagnostic evaluation. This pipeline-first approach allows analytic decisions to be tested and validated independently of data expansion.
 
 In later project stages, the pipeline will be applied to a more systematically sampled dataset using channel-based collection (e.g., the TED YouTube channel). This planned pivot addresses representativeness concerns by clearly defining the content population, while preserving methodological continuity across project stages.
+
+## Execution Environment
+All notebooks are designed to be run in Google Colab. API credentials are stored securely as environment variables within Colab and are not committed to the GitHub repository. Notebooks are uploaded without execution outputs to ensure reproducibility and credential safety.
+
