@@ -53,23 +53,23 @@ These comparisons demonstrate that sentiment estimates are not fixed properties 
 
 ### Week 5: Diagnostics, Robustness, and Validity Checks (In Progress)
 
-Week 5 focuses on evaluating the robustness and validity of sentiment-based findings by conducting diagnostic analyses under controlled conditions. Rather than introducing new data, this stage tests how sensitive observed patterns are to analytic and preprocessing decisions.
+Week 5 focuses on evaluating the robustness and validity of sentiment-based findings through a series of controlled diagnostic analyses. Rather than introducing new data, this stage treats the existing multi-genre comment dataset as a fixed input and tests how sensitive observed patterns are to analytic, preprocessing, and sampling decisions.
 
 Current work includes:
-- Treating the existing multi-genre comment dataset as a fixed input
+- Treating the existing multi-genre comment dataset as a fixed analytic baseline
 - Applying multiple preprocessing pipelines (raw text, basic cleaning, aggressive normalization)
 - Recomputing sentiment scores under each preprocessing condition
-- Comparing genre-level sentiment summaries across preprocessing variants
+- Conducting sample-size sensitivity checks using matched top-level comment samples
+- Inspecting sentiment score distributions to identify compression, skewness, and mass at neutral values
 
-### Diagnostic Focus (Week 5)
-
-Week 5 explicitly evaluates whether genre-level sentiment patterns are stable or fragile with respect to analytic choices. Diagnostics include:
-
+Diagnostic focus (Week 5):
 - **Preprocessing sensitivity:** Assessing how sentiment estimates shift when URLs, punctuation, casing, and non-alphanumeric characters are progressively removed
-- **Distributional inspection:** Examining sentiment score distributions to identify compression, skewness, and mass at neutral values
-- **Comparability checks:** Ensuring that all comparisons are conducted on identical comment samples to isolate analytic effects from sampling effects
+- **Sample-size robustness:** Testing whether genre-level sentiment patterns remain stable as the number of comments per video varies
+- **Distributional inspection:** Examining sentiment score distributions to evaluate validity and potential measurement artifacts
 
-These diagnostics demonstrate that sentiment estimates are not invariant properties of the data but are shaped by representation and preprocessing choices. This has direct implications for the validity of genre-level emotional comparisons.
+These diagnostics demonstrate that sentiment estimates are not invariant properties of the data but are shaped by representation, preprocessing, and sampling choices. While absolute sentiment magnitudes change under different conditions, relative genre-level patterns remain largely stable. This strengthens confidence in the substantive interpretation of emotional tone differences across genres.
+
+This week also marks a transition toward a fully modular, reproducible analysis pipeline. Beginning in Week 6, this pipeline will be applied to a channel-based sample focused on TED and TEDx talks, enabling more representative inference while maintaining consistent time-bin stratification.
 
 ### Pipeline Development and Planned Sampling Pivot
 
