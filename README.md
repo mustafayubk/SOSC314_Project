@@ -61,6 +61,9 @@ Current work includes:
 - Recomputing sentiment scores under each preprocessing condition
 - Conducting sample-size sensitivity checks using matched top-level comment samples
 - Inspecting sentiment score distributions to identify compression, skewness, and mass at neutral values
+- Implemented preprocessing sensitivity diagnostics using multiple text normalization pipelines
+- Evaluated sample-size robustness by varying the number of comments per video
+- Conducted method robustness checks comparing VADER and TextBlob sentiment distributions
 
 Diagnostic focus (Week 5):
 - **Preprocessing sensitivity:** Assessing how sentiment estimates shift when URLs, punctuation, casing, and non-alphanumeric characters are progressively removed
