@@ -1,0 +1,2 @@
+channel,time_bin,n_comments,mean_vader,mean_textblob
+TED,2020+,6727,0.1880385907536792,0.13624012934666407
