@@ -51,7 +51,7 @@ Week 4 explicitly evaluates how analytic and representation choices affect senti
 
 These comparisons demonstrate that sentiment estimates are not fixed properties of the data but depend on methodological choices, which has implications for interpreting emotional tone across YouTube genres.
 
-### Week 5: Diagnostics, Robustness, and Validity Checks (In Progress)
+### Week 5: Diagnostics, Robustness, and Validity Checks
 
 Week 5 focuses on evaluating the robustness and validity of sentiment-based findings through a series of controlled diagnostic analyses. Rather than introducing new data, this stage treats the existing multi-genre comment dataset as a fixed input and tests how sensitive observed patterns are to analytic, preprocessing, and sampling decisions.
 
@@ -73,6 +73,36 @@ Diagnostic focus (Week 5):
 These diagnostics demonstrate that sentiment estimates are not invariant properties of the data but are shaped by representation, preprocessing, and sampling choices. While absolute sentiment magnitudes change under different conditions, relative genre-level patterns remain largely stable. This strengthens confidence in the substantive interpretation of emotional tone differences across genres.
 
 This week also marks a transition toward a fully modular, reproducible analysis pipeline. Beginning in Week 6, this pipeline will be applied to a channel-based sample focused on TED and TEDx talks, enabling more representative inference while maintaining consistent time-bin stratification.
+
+### Week 6: Channel-Based Data Collection + Pipeline Stabilization (In Progress)
+
+Week 6 focuses on applying our established scraping + preprocessing pipeline to a channel-based sample (TED/TEDx), while maintaining consistent time-bin stratification. The goal is to produce a stable, analysis-ready comment dataset that can support our updated research question about how emotional tone varies over time and across sentiment operationalizations.
+
+Current work includes:
+
+- Running a fault-tolerant YouTube Data API scraping loop (chunked saves + progress logging) for the TED/TEDx channel sample
+- Building a raw-to-clean pipeline: merging chunk files, removing empty comments, and dropping duplicate comment IDs
+- Verifying time coverage and constructing time bins from observed data availability (current coverage: 2016–2026)
+- Creating a processed dataset that is small enough to share and reproducible (raw chunks archived separately)
+
+Time bin operationalization (current):
+
+- 2016–2018 (early YouTube TED)
+- 2019–2020 (pre-COVID)
+- 2021–2022 (COVID & aftermath)
+- 2023–2026 (recent)
+
+Outputs (Week 6):
+
+- Raw chunked comment files (stored locally / zipped backup to prevent data loss)
+- Progress logs + scrape summary files for reproducibility and debugging
+- Cleaned, deduplicated comments dataset with time-bin variable for analysis-ready use
+
+Next steps:
+
+- Implement multiple sentiment operationalizations (e.g., VADER + TextBlob) on the same cleaned dataset
+- Compare sentiment distributions and time-bin patterns across operationalizations
+- Begin Week 4 focus: analytic comparison of how measurement choices shape interpretation of public engagement
 
 ### Pipeline Development and Planned Sampling Pivot
 
