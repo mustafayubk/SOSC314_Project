@@ -1,17 +1,32 @@
 # SOSC314_Project  
-## Audience Engagement and Emotional Tone Across YouTube Video Genres
+## Audience Engagement and Emotional Tone Across YouTube Videos
 
 ## Project Overview
-This project examines how audience engagement and emotional tone vary across distinct YouTube video genres, focusing on TED-style talks, short films, and personal opinion videos. Using YouTube comments as text-as-data, the project investigates how differences in content format and communicative intent shape both the volume and emotional characteristics of audience responses.
+This project examines how emotional tone in audience responses to expert discourse on YouTube varies over time, using TED and TEDx talks as a clearly defined content population. Using YouTube comments as text-as-data, the project focuses on understanding how public emotional reactions to expert-led talks evolve across publication periods and how different sentiment analysis choices shape our interpretation of audience engagement.
+
+The project is structured around a reproducible, modular data pipeline that supports large-scale comment collection, systematic preprocessing, and comparative sentiment analysis. Early project stages focused on building and validating this pipeline, while later stages apply it to a channel-based sample of TED and TEDx videos to address concerns about representativeness and sampling bias.
 
 ## Research Question
-How do audience engagement and emotional tone in YouTube comments differ across TED-style talks, short films, and personal opinion videos, when engagement is measured using matched top-level comment samples and emotional tone is estimated using text-as-data methods?
+How does emotional tone in audience responses to TED talks vary across time, and how do different sentiment operationalizations shape our interpretation of public engagement with expert discourse?
 
 ## Data Source
-The project uses publicly available YouTube comments collected via the YouTube Data API (v3). Comments are collected programmatically for a curated set of videos spanning multiple genres and time periods.
+The project uses publicly available YouTube comments collected via the YouTube Data API (v3). Data collection follows a channel-based sampling strategy, focusing on official TED and TEDx YouTube channels. Video metadata and top-level comments are collected programmatically and organized into time-based publication bins to enable longitudinal analysis.
 
 ## Unit of Analysis
 The primary unit of analysis is the individual top-level YouTube comment. Each comment is linked to video-level metadata, including genre and publication period.
+
+## Analytic Pipeline Development
+A central goal of this project is the construction of a scalable and reproducible text-as-data pipeline. The pipeline is designed to operate independently of any specific dataset, allowing analytic methods to be validated before being applied to larger or alternative samples.
+
+Key components of the pipeline include:
+- Channel-based video sampling from TED and TEDx YouTube channels
+- Time bin assignment based on video publication year
+- Collection of top-level comments with controlled caps to ensure comparability and manage API constraints
+- Comment-level cleaning and normalization
+- Modular sentiment estimation using multiple dictionary-based approaches
+- Diagnostic checks assessing sensitivity to preprocessing and methodological choices
+
+This pipeline-first approach ensures that later analytic results reflect substantive patterns in the data rather than artifacts of implementation or sampling decisions.
 
 ## Project Status
 
@@ -74,41 +89,17 @@ These diagnostics demonstrate that sentiment estimates are not invariant propert
 
 This week also marks a transition toward a fully modular, reproducible analysis pipeline. Beginning in Week 6, this pipeline will be applied to a channel-based sample focused on TED and TEDx talks, enabling more representative inference while maintaining consistent time-bin stratification.
 
-### Week 6: Channel-Based Data Collection + Pipeline Stabilization (In Progress)
+### Week 6: Synthesis, Final Dataset Construction, and Channel-Based Sampling
+Week 6 focuses on finalizing the project’s analytic configuration and applying the validated pipeline to a large-scale, channel-based dataset.
 
-Week 6 focuses on applying our established scraping + preprocessing pipeline to a channel-based sample (TED/TEDx), while maintaining consistent time-bin stratification. The goal is to produce a stable, analysis-ready comment dataset that can support our updated research question about how emotional tone varies over time and across sentiment operationalizations.
+Key activities include:
+- Scraping a large sample of videos from official TED and TEDx channels
+- Constructing a unified, time-stratified comment dataset
+- Applying the established preprocessing and sentiment pipeline to the full sample
+- Producing near-final figures intended for the final project presentation
+- Documenting limitations, scope, and validity considerations
 
-Current work includes:
-
-- Running a fault-tolerant YouTube Data API scraping loop (chunked saves + progress logging) for the TED/TEDx channel sample
-- Building a raw-to-clean pipeline: merging chunk files, removing empty comments, and dropping duplicate comment IDs
-- Verifying time coverage and constructing time bins from observed data availability (current coverage: 2016–2026)
-- Creating a processed dataset that is small enough to share and reproducible (raw chunks archived separately)
-
-Time bin operationalization (current):
-
-- 2016–2018 (early YouTube TED)
-- 2019–2020 (pre-COVID)
-- 2021–2022 (COVID & aftermath)
-- 2023–2026 (recent)
-
-Outputs (Week 6):
-
-- Raw chunked comment files (stored locally / zipped backup to prevent data loss)
-- Progress logs + scrape summary files for reproducibility and debugging
-- Cleaned, deduplicated comments dataset with time-bin variable for analysis-ready use
-
-Next steps:
-
-- Implement multiple sentiment operationalizations (e.g., VADER + TextBlob) on the same cleaned dataset
-- Compare sentiment distributions and time-bin patterns across operationalizations
-- Begin Week 4 focus: analytic comparison of how measurement choices shape interpretation of public engagement
-
-### Pipeline Development and Planned Sampling Pivot
-
-At this stage, the project prioritizes building a reusable and transparent analysis pipeline for sentiment estimation, preprocessing, and diagnostic evaluation. This pipeline-first approach allows analytic decisions to be tested and validated independently of data expansion.
-
-In later project stages, the pipeline will be applied to a more systematically sampled dataset using channel-based collection (e.g., the TED YouTube channel). This planned pivot addresses representativeness concerns by clearly defining the content population, while preserving methodological continuity across project stages.
+This stage represents the transition from pipeline validation to substantive interpretation, ensuring that final conclusions are grounded in a systematically defined and representative content population.
 
 ## Execution Environment
 All notebooks are designed to be run in Google Colab. API credentials are stored securely as environment variables within Colab and are not committed to the GitHub repository. Notebooks are uploaded without execution outputs to ensure reproducibility and credential safety.
