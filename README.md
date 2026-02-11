@@ -96,7 +96,9 @@ Key activities include:
 - Scraping a large sample of videos from official TED and TEDx channels
 - Constructing a unified, time-stratified comment dataset
 - Applying the established preprocessing and sentiment pipeline to the full sample
-- Producing near-final figures intended for the final project presentation
+- Documenting final time-stratified sentiment comparison (VADER vs TextBlob)
+- Adding sentiment composition figure description
+- Clarified that Week 6 synthesizes prior diagnostics into presentation-ready outputs
 - Documenting limitations, scope, and validity considerations
 
 This stage represents the transition from pipeline validation to substantive interpretation, ensuring that final conclusions are grounded in a systematically defined and representative content population.
